@@ -12,3 +12,4 @@ scikit-learn
 openTSNE
 psutil
 sentence-transformers
+fpdf
