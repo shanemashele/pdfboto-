@@ -3,7 +3,6 @@ import re
 import pdfplumber
 import os
 import numpy as np
-import tensorflow as tf
 from datetime import date
 from ai21 import AI21Client
 from ai21.errors import UnprocessableEntity
@@ -11,8 +10,7 @@ from auth import register_user, login_user
 from community import load_messages, post_message, delete_message, update_message, show_community
 from export_pdf import generate_pdf, create_download_link
 
-# Suppress TensorFlow warnings
-tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
+
 
 logo_path = 'logo.png'
 
