@@ -3,7 +3,6 @@ import re
 import pdfplumber
 import os
 import numpy as np
-import tensorflow_hub as hub
 import tensorflow as tf
 from datetime import date
 from ai21 import AI21Client
