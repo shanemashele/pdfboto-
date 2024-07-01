@@ -1,7 +1,6 @@
 ai21
 pdfplumber
 numpy
-tensorflow-hub
 tensorflow
 altair
 streamlit
