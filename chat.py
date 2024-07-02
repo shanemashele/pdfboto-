@@ -40,6 +40,32 @@ def write_to_library(segmented_text, file_name):
         f.write(segmented_text)
     return path
 
+# Function to upload file to AI21
+def upload_file(file_path):
+    endpoint = "https://api.ai21.com/studio/v1/library/files"
+
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+
+    payload = {
+        "file_path": file_path,
+        "labels": label
+    }
+
+    try:
+        response = requests.post(endpoint, headers=headers, json=payload)
+        response.raise_for_status()  # Raises an HTTPError for bad responses
+        if response.status_code == 200:
+            st.success("File uploaded successfully.")
+        else:
+            st.error(f"Unexpected status code: {response.status_code}")
+            st.error(response.json())  # Print the full response for debugging
+    except requests.HTTPError as http_err:
+        st.error(f"HTTP error occurred: {http_err}")
+    except Exception as err:
+        st.error(f"Other error occurred: {err}")
 # Function to parse uploaded files
 def parse_file(user_file):
     file_type = user_file.type
