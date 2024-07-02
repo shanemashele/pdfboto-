@@ -14,12 +14,12 @@ from dotenv import load_dotenv
 
 logo_path = 'logo.png'
 # Load environment variables from .env file
-load_dotenv()
+# Directly assign the API key
+api_key = "VkFkTvy0NxSmPYKJ9wNOWCqfAGeLqd9H"
 
-# Get the API key from environment variables
-api_key = os.getenv("ai21-api-key")
+# Check if the API key was assigned
 if not api_key:
-    raise ValueError("No AI21_API_KEY found in environment variables")
+    raise ValueError("API key is missing")
 
 # Initialize the AI21 client with the API key
 client = AI21Client(api_key=api_key)
