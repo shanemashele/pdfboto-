@@ -1,0 +1,14 @@
+ai21
+pdfplumber
+numpy
+tensorflow-hub
+tensorflow
+altair
+streamlit
+streamlit
+torch
+pandas
+scikit-learn
+openTSNE
+psutil
+sentence-transformers
