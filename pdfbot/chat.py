@@ -10,7 +10,7 @@ from auth import register_user, login_user
 from community import load_messages, post_message, delete_message, update_message, show_community
 from export_pdf import generate_pdf, create_download_link
 
-
+ai21-api-key = "VkFkTvy0NxSmPYKJ9wNOWCqfAGeLqd9H"
 
 logo_path = 'logo.png'
 
